@@ -1,0 +1,14 @@
+DROP TABLE Dress_Shopping_App_Orders;
+
+CREATE TABLE Dress_Shopping_App_Orders (
+DressIdNo INT PRIMARY KEY AUTO_INCREMENT,
+DressName VARCHAR ( 100 ) NOT NULL,
+BrandName VARCHAR ( 100 ) NOT NULL,
+Colour VARCHAR ( 100 ) NOT NULL,
+Size VARCHAR ( 100 ) NOT NULL,
+Price BIGINT ( 6 ) NOT NULL,
+COUNT BIGINT ( 10 ) NOT NULL,
+TotalPrice BIGINT ( 10 ) NOT NULL
+);
+
+SELECT * FROM Dress_Shopping_App_Orders;

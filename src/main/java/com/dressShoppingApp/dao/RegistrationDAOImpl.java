@@ -18,16 +18,16 @@ public class RegistrationDAOImpl implements IRegistrationDAO {
 			Connection connection = DriverManager.getConnection("jdbc:mysql://101.53.133.59:3306/revature_training_db",
 					"rev_user", "rev_user");
 			
-		String query="INSERT INTO Dress_Shopping_App_User (User_Name,User_Email_ID,User_Password,User_Mobile_No) VALUES(?,?,?,?)";
+		String query="INSERT INTO Dress_Shopping_App_User (UserName,UserEmail,UserPassword,UserMobileNo) VALUES(?,?,?,?)";
 		PreparedStatement statement=connection.prepareStatement(query);//purpose-if we use concatenation method in statement space occupied more so use prepared statement and get the values.
-			statement.setString(1,registration.getUser_Name());
-			statement.setString(2,registration.getUser_Email_ID());
-			statement.setString(3,registration.getUser_Password());
-			statement.setString(4,registration.getUser_Mobile_No());
+			statement.setString(1,registration.getUserName());
+			statement.setString(2,registration.getUserEmail());
+			statement.setString(3,registration.getUserPassword());
+			statement.setString(4,registration.getUserMobileNo());
 			
-			System.out.println(query);
+			System.out.println();
 			int row=statement.executeUpdate();
-			System.out.println("No of rows inserted:"+row);
+			System.out.println();
 			
 			statement.close();
 		connection.close();

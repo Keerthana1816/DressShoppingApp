@@ -4,19 +4,37 @@ import com.dressShoppingApp.model.Registration;
 
 public class RegistrationValidation {
 
-	public static void Registrationvalidation(Registration registration) throws Exception {
-		if(registration.getUser_Name()==null|| registration.getUser_Name().equals(" ")||registration.getUser_Name().trim().equals("")) {
-			throw new Exception("User_Name cannot be null");//raise an problem
+	public static void validation(Registration registration) throws Exception {
+		if(registration.getUserName()!=null) {
+		
 		}
-		else if(registration.getUser_Email_ID()==null) {
-			throw new Exception("invalid User_Email_ID");
+		else
+		{
+		throw new Exception("Invalid UserName");
+		} 
+		
+		if(registration.getUserEmail().contains("@")&&registration.getUserEmail().contains(".com")) {
+			
 		}
-		else if(registration.getUser_Password() ==null) {
-			throw new Exception("invalid User_Password");
+		else
+		{
+			throw new Exception("Invalid UserEmail");
 		}
-		else if(registration.getUser_Mobile_No() ==null) {
-			throw new Exception("invalid mobile number");
+		if(registration.getUserPassword().length()>=8&&registration.getUserPassword().length()<=16) {
+			
 		}
-		System.out.println("validation is successful");
+		else
+		{
+			throw new Exception("Invalid UserPassword");
+		}
+		 if(registration.getUserMobileNo().length()>=10) {
+			
+		}
+		 else
+			{
+			 throw new Exception("Invalid MobileNO");
+			}
+		 
+		 }
 	}
-}
+

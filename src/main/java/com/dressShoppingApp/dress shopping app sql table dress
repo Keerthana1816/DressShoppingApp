@@ -1,0 +1,18 @@
+DROP TABLE Dressitems;
+
+CREATE TABLE Dressitems (
+DressIdNo INT PRIMARY KEY AUTO_INCREMENT,
+DressName VARCHAR ( 100 ) NOT NULL,
+BrandName VARCHAR ( 100 ) NOT NULL,
+Colour VARCHAR ( 100 ) NOT NULL,
+Price BIGINT ( 6 ) NOT NULL
+);
+
+SELECT * FROM Dressitems;
+
+INSERT INTO Dressitems (DressName,BrandName,Colour,Price) VALUES ('kurta','trends','black',450);
+INSERT INTO Dressitems (DressName,BrandName,Colour,Price) VALUES ('jean','trends','blue',780);
+INSERT INTO Dressitems (DressName,BrandName,Colour,Price) VALUES ('chudi','fusion','white',450);
+INSERT INTO Dressitems (DressName,BrandName,Colour,Price) VALUES ('kurta','trends','black',450);
+INSERT INTO Dressitems (DressName,BrandName,Colour,Price) VALUES ('chudi','fusion','black',999);
+INSERT INTO Dressitems (DressName,BrandName,Colour,Price) VALUES ('top','trends','pink',450);

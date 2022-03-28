@@ -1,0 +1,10 @@
+CREATE TABLE payments (
+DressIdNo INT PRIMARY KEY AUTO_INCREMENT,
+DressName VARCHAR ( 100 ) NOT NULL,
+PaymentOption VARCHAR ( 100 ) NOT NULL,
+Price BIGINT ( 10 )NOT NULL,
+DeliveryCharge VARCHAR ( 100 ) NOT NULL,
+TotalAmount BIGINT ( 10 )NOT NULL
+);
+
+SELECT*FROM payments;

@@ -3,32 +3,57 @@ package com.dressShoppingApp.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-import com.dressShoppingApp.model.Login;
+
+import com.dressShoppingApp.model.Registration;
+import com.dressShoppingApp.validation.LoginValidator;
 
 
 public class LoginDAOImpl implements ILoginDAO {
+  
+	public LoginDAOImpl() {
+	}
+	public static void main(String[] args) {
 		
-		//private static Object user;
-		public static void addLogin (Login login)throws Exception  {
-			//// Step 1 : Database Driver ( Optional)
+	}
+		public static void loginValidator(String UserEmail ,String password) throws Exception
+		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			// Step 2: Get the Connection
 			Connection connection = DriverManager.getConnection("jdbc:mysql://101.53.133.59:3306/revature_training_db",
 					"rev_user", "rev_user");
 			
-		String query="INSERT INTO Dress_Shopping_App_User_Login (User_Email_ID,User_Password) VALUES(?,?)";
-		PreparedStatement statement=connection.prepareStatement(query);//purpose-if we use concatenation method in statement space occupied more so use prepared statement and get the values.
-			statement.setString(1,login.getUser_Email_ID());
-			statement.setString(2,login.getUser_Password());
-			
-			
-			System.out.println(query);
-			int row=statement.executeUpdate();
-			System.out.println("No of rows inserted:"+row);
-			
-			statement.close();
-		connection.close();
+		
+		   PreparedStatement statement;
+		   ResultSet rs = null;
+		   
+		String query = "SELECT UserEmail,UserPassword FROM Dress_Shopping_App_User WHERE UserEmail=?";
+		statement = connection.prepareStatement(query);
+		        statement.setString(1, UserEmail);
+		        rs = statement.executeQuery();
+		        String Email=null;
+		        String Password=null;
+		while(rs.next())
+		{
+		Email=rs.getString("UserEmail");
+		Password=rs.getString("UserPassword");
 		}
-	}
+		if(Email==null)
+		{
+		       System.out.println("Invalid UserEmail");
+		       LoginValidator.test();
+		}
+		else if(Password.equals(password))
+		{
+		System.out.println("You have logged in successfully");
+		
+		}
+		else
+		{
+			System.out.println("Invalid Password");
+		     LoginValidator.test();
+		}
+		}
+}	
 	

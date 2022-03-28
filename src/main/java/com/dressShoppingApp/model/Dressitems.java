@@ -1,55 +1,62 @@
 package com.dressShoppingApp.model;
 
 public class Dressitems {
-
-	     private String Dress_Name;
-		 private String Brand_Name;
-		 private String Colour;
-		 private String Price;
-
-
-	public String getDress_Name() {
-		return Dress_Name;
-	}
-
-
-	public void setDress_Name(String dress_Name) {
-		Dress_Name = dress_Name;
-	}
-
-
-	public String getBrand_Name() {
-		return Brand_Name;
-	}
-
-
-	public void setBrand_Name(String brand_Name) {
-		Brand_Name = brand_Name;
-	}
-
-
+    
+	private String DressIdNo;
+	private String DressName;
+	private String BrandName;
+	private String Colour;
+	private String Price;
 	
-	public String getColour() {
-		return Colour;
+	public String getDressIdNo() {
+		return DressIdNo;
 	}
 
 
-	public void setColour(String colour) {
-		Colour = colour;
+	public void setDressIdNo(String dressIdNo) {
+		this.DressIdNo = dressIdNo;
 	}
+	
+	   public String getDressName() {
+			return DressName;
+		}
 
 
-	public String getPrice() {
-		return Price;
-	}
+		public void setDressName(String DressName) {
+		this.DressName = DressName;
+		}
 
 
-	public void setPrice(String price) {
-		Price = price;
-	}
+		public String getBrandName() {
+			return BrandName;
+		}
 
-	public String toString() {
-		return "Dress_Name=" + Dress_Name + ", Brand_Name=" + Brand_Name  + ", Colour=" + Colour + ",  price=" + Price + "";
-	}
-	}
 
+		public void setBrandName(String BrandName) {
+			this.BrandName = BrandName;
+		}
+		public String getColour() {
+			return Colour;
+		}
+
+
+		public void setColour(String colour) {
+			this.Colour = colour;
+		}
+		public String getPrice() {
+			return Price;
+		}
+		public void setPrice(String price) {
+			this.Price = price;
+		}
+
+		public String toString() {
+			return " DressIdNo=" + DressIdNo +",DressName=" + DressName + ", BrandName=" + BrandName  + ", Colour=" + Colour + ", Price=" + Price + "";
+		}
+
+
+		
+
+
+		
+}

@@ -1,5 +1,5 @@
 package com.dressShoppingApp.dao;
 
-public interface IOrdersDAO {
+public interface IPaymentDAO {
 
 }

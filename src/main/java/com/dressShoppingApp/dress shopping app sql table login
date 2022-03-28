@@ -1,0 +1,8 @@
+DROP TABLE Dress_Shopping_App_User_Login;
+
+CREATE TABLE  Dress_Shopping_App_User_Login (
+id INT PRIMARY KEY AUTO_INCREMENT,
+UserEmail  VARCHAR (100) NOT NULL UNIQUE,
+UserPassword VARCHAR (100) NOT NULL
+);
+ SELECT * FROM Dress_Shopping_App_User_Login;

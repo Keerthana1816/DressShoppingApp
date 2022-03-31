@@ -19,7 +19,7 @@ public class OrderDAOImpl implements IOrderDAO {
 		
 	String query="INSERT INTO Dress_Shopping_App_Orders (DressIdNo,Size,Price,Quantity,TotalPrice) VALUES(?,?,?,?,?)";
 	
-	PreparedStatement statement=connection.prepareStatement(query);//purpose-if we use concatenation method in statement space occupied more so use prepared statement and get the values.
+	PreparedStatement statement=connection.prepareStatement(query);
 	    
 	    statement.setString(1,Orders.getDressIdNo());
 		statement.setString(2,Orders.getSize());
@@ -45,7 +45,7 @@ public class OrderDAOImpl implements IOrderDAO {
 		
 	String query="UPDATE Dress_Shopping_App_Orders SET Size=? WHERE DressIdNo=?";
 	
-	PreparedStatement statement=connection.prepareStatement(query);//purpose-if we use concatenation method in statement space occupied more so use prepared statement and get the values.
+	PreparedStatement statement=connection.prepareStatement(query);
 	    
 	    statement.setString(1,Orders.getSize());
 		statement.setString(2,Orders.getDressIdNo());

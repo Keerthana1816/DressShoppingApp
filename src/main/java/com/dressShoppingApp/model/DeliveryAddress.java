@@ -2,6 +2,7 @@ package com.dressShoppingApp.model;
 
 public class DeliveryAddress {
 	
+	private String OrderIdNo;
 	private String Name;
 	private String MoblieNo;
 	private String DoorNo;
@@ -11,6 +12,13 @@ public class DeliveryAddress {
 	private String State;
 	
 	
+	
+	public String getOrderIdNo() {
+		return OrderIdNo;
+	}
+	public void setOrderIdNo(String orderIdNo) {
+		this.OrderIdNo = orderIdNo;
+	}
 	public String getName() {
 		return Name;
 	}
@@ -55,7 +63,8 @@ public class DeliveryAddress {
 		this.State = state;
 	}
 	public String toString() {
-		return " Name=" + Name + ",MoblieNo=" + MoblieNo + ",DoorNo=" + DoorNo + ", Address=" + Address + ", Location=" + Location
+		return " OrderIdNo=" + OrderIdNo + ", Name=" + Name + ",MoblieNo=" + MoblieNo + ",DoorNo=" + DoorNo + ", Address=" + Address + ", Location=" + Location
 				+ ", District=" + District + ", State=" + State +"";
 }
+	
 }

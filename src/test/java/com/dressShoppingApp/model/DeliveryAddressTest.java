@@ -16,7 +16,10 @@ public class DeliveryAddressTest {
 	}
 	public static void address() throws Exception {
 			Scanner sc=new Scanner(System.in);
-
+			
+			
+			System.out.println("Enter OrderIdNo:");
+			String OrderIdNo=sc.next();
 			System.out.println("Enter Name:");
 			String Name=sc.next();
 			System.out.println("Enter Mobile No:");
@@ -33,7 +36,8 @@ public class DeliveryAddressTest {
 			String State=sc.next();
 			
 			DeliveryAddress address = new DeliveryAddress();
-
+			
+            address.setOrderIdNo(OrderIdNo);
 			address.setName(Name);
 			address.setMoblieNo(MobileNo);
 			address.setDoorNo(DoorNo);

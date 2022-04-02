@@ -1,5 +1,7 @@
 package com.dressShoppingApp.dao;
 
-public interface IRegistrationDAO {
+import com.dressShoppingApp.model.Registration;
 
+public interface IRegistrationDAO {
+	public void addRegistration(Registration registration) throws Exception;
 }

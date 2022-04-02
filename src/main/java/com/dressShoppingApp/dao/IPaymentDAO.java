@@ -1,5 +1,7 @@
 package com.dressShoppingApp.dao;
 
-public interface IPaymentDAO {
+import com.dressShoppingApp.model.Payment;
 
+public interface IPaymentDAO {
+	public void details(Payment payment) throws Exception;
 }

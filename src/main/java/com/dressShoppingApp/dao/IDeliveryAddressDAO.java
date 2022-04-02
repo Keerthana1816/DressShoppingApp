@@ -1,5 +1,7 @@
 package com.dressShoppingApp.dao;
 
-public interface IDeliveryAddressDAO {
+import com.dressShoppingApp.model.DeliveryAddress;
 
+public interface IDeliveryAddressDAO {
+	public void details(DeliveryAddress address) throws Exception;
 }

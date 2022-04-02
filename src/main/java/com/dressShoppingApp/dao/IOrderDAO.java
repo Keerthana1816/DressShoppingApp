@@ -1,5 +1,7 @@
 package com.dressShoppingApp.dao;
 
-public interface IOrderDAO {
+import com.dressShoppingApp.model.Order;
 
+public interface IOrderDAO {
+	public void addOrders(Order Orders) throws Exception;
 }

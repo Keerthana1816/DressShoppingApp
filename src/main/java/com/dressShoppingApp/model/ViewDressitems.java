@@ -9,14 +9,16 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.dressShoppingApp.dao.ConnectionUtil;
+
 public class ViewDressitems {
 	public static List<Dressitems> showAll() throws SQLException, ClassNotFoundException {
 		List<Dressitems> dress = new ArrayList<Dressitems>();
 		String sql = "select * from Dressitems";
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection connection = DriverManager.getConnection("jdbc:mysql://101.53.133.59:3306/revature_training_db",
-				"rev_user", "rev_user");
-		Statement statement = connection.prepareStatement(sql);
+		Connection connection;
+		PreparedStatement statement;
+		connection = ConnectionUtil.databaseConnection();
+		statement = connection.prepareStatement(sql);
 
 		// 3.execute query
 		ResultSet rs = statement.executeQuery(sql);
@@ -43,11 +45,11 @@ public class ViewDressitems {
 
 	public static List<Dressitems> DressName(String dressname) throws SQLException, ClassNotFoundException {
 		List<Dressitems> DressName = new ArrayList<Dressitems>();
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection connection = DriverManager.getConnection("jdbc:mysql://101.53.133.59:3306/revature_training_db",
-				"rev_user", "rev_user");
+		Connection connection;
+		PreparedStatement statement;
+		connection = ConnectionUtil.databaseConnection();
 		String sql = "SELECT DressIdNo,DressName,BrandName,Colour,Price FROM Dressitems WHERE DressName=?";
-		PreparedStatement statement = connection.prepareStatement(sql);
+		statement = connection.prepareStatement(sql);
 		statement.setString(1, dressname);
 		// 3.execute query
 		ResultSet rs1 = statement.executeQuery();
@@ -74,11 +76,11 @@ public class ViewDressitems {
 
 	public static List<Dressitems> BrandName(String brandname) throws SQLException, ClassNotFoundException {
 		List<Dressitems> BrandName = new ArrayList<Dressitems>();
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection connection = DriverManager.getConnection("jdbc:mysql://101.53.133.59:3306/revature_training_db",
-				"rev_user", "rev_user");
+		Connection connection;
+		PreparedStatement statement;
+		connection = ConnectionUtil.databaseConnection();
 		String sql = "SELECT DressIdNo,DressName,BrandName,Colour,Price FROM Dressitems WHERE BrandName=?";
-		PreparedStatement statement = connection.prepareStatement(sql);
+		statement = connection.prepareStatement(sql);
 		statement.setString(1, brandname);
 		// 3.execute query
 		ResultSet rs2 = statement.executeQuery();

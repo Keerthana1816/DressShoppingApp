@@ -1,9 +1,9 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 import java.util.Scanner;
 
-import com.dressShoppingApp.dao.OrderDAOImpl;
-import com.dressShoppingApp.model.OrderTest;
+import com.dressshoppingapp.dao.OrderDAOImpl;
+import com.dressshoppingapp.model.OrderTest;
 
 public class OrderTest {
 
@@ -16,25 +16,25 @@ public class OrderTest {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter Dress Id No:");
-		String DressIdNo = sc.next();
+		String id = sc.next();
 		System.out.println("Enter Size:");
-		String Size = sc.next();
+		String size = sc.next();
 		System.out.println("Enter Price:");
-		String Price = sc.next();
-		System.out.println("Enter Quantity:");
-		String Quantity = sc.next();
+		String price = sc.next();
+		System.out.println("Enter Count:");
+		String count = sc.next();
 		System.out.println("Enter Total Price:");
-		String TotalPrice = sc.next();
+		String totalPrice = sc.next();
 
 		Order o = new Order();
 
-		o.setDressIdNo(DressIdNo);
-		o.setSize(Size);
-		o.setPrice(Price);
-		o.setCount(Quantity);
-		o.setTotalPrice(TotalPrice);
+		o.setDressIdNo(id);
+		o.setSize(size);
+		o.setPrice(price);
+		o.setCount(count);
+		o.setTotalPrice(totalPrice);
 
-		int count = 0;
+		int count1 = 0;
 		try {
 
 		} catch (Exception e) {
@@ -42,11 +42,11 @@ public class OrderTest {
 			System.out.println(e.getMessage());
 			System.out.println("You have entered a wrong Option");
 			System.out.println("Enter Once again");
-			count++;
+			count1++;
 			order();
 		}
 
-		if (count == 0) {
+		if (count1 == 0) {
 			System.out.println("Your Order is placed successfully..\n");
 			OrderDAOImpl orderDAOImpl = new OrderDAOImpl();
 			orderDAOImpl.addOrders(o);

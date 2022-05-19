@@ -1,83 +1,83 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 public class DeliveryAddress {
 
-	private String OrderIdNo;
-	private String Name;
-	private String MoblieNo;
-	private String DoorNo;
-	private String Address;
-	private String Location;
-	private String District;
-	private String State;
+	private String orderIdNo;
+	private String name;
+	private String moblieNo;
+	private String doorNo;
+	private String address;
+	private String location;
+	private String district;
+	private String state;
 
 	public String getOrderIdNo() {
-		return OrderIdNo;
+		return orderIdNo;
 	}
 
 	public void setOrderIdNo(String orderIdNo) {
-		this.OrderIdNo = orderIdNo;
+		this.orderIdNo = orderIdNo;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		this.Name = name;
+		this.name = name;
 	}
 
 	public String getMoblieNo() {
-		return MoblieNo;
+		return moblieNo;
 	}
 
 	public void setMoblieNo(String moblieNo) {
-		this.MoblieNo = moblieNo;
+		this.moblieNo = moblieNo;
 	}
 
 	public String getDoorNo() {
-		return DoorNo;
+		return doorNo;
 	}
 
 	public void setDoorNo(String doorNo) {
-		this.DoorNo = doorNo;
+		this.doorNo = doorNo;
 	}
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		this.Address = address;
+		this.address = address;
 	}
 
 	public String getLocation() {
-		return Location;
+		return location;
 	}
 
 	public void setLocation(String location) {
-		this.Location = location;
+		this.location = location;
 	}
 
 	public String getDistrict() {
-		return District;
+		return district;
 	}
 
 	public void setDistrict(String district) {
-		this.District = district;
+		this.district = district;
 	}
 
 	public String getState() {
-		return State;
+		return state;
 	}
 
 	public void setState(String state) {
-		this.State = state;
+		this.state = state;
 	}
 
 	public String toString() {
-		return " OrderIdNo=" + OrderIdNo + ", Name=" + Name + ",MoblieNo=" + MoblieNo + ",DoorNo=" + DoorNo
-				+ ", Address=" + Address + ", Location=" + Location + ", District=" + District + ", State=" + State
+		return " orderIdNo=" + orderIdNo + ", name=" + name + ",moblieNo=" + moblieNo + ",doorNo=" + doorNo
+				+ ", address=" + address + ", location=" + location + ", district=" + district + ", state=" + state
 				+ "";
 	}
 

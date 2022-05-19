@@ -1,4 +1,4 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 import java.util.Scanner;
 
@@ -37,7 +37,7 @@ public class HomePage2 {
 			home2();
 		} else if (Press == 7) {
 			DeliveryAddressTest.address();
-			HomePage1.home1();
+			home2();
 		} else if (Press == 8) {
 			System.out.println("Thank you");
 		}

@@ -1,10 +1,9 @@
-package com.dressShoppingApp.dao;
+package com.dressshoppingapp.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-import com.dressShoppingApp.model.DeliveryAddress;
+import com.dressshoppingapp.model.DeliveryAddress;
 
 public class DeliveryAddressDAOImpl implements IDeliveryAddressDAO {
 
@@ -14,7 +13,7 @@ public class DeliveryAddressDAOImpl implements IDeliveryAddressDAO {
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
 
-		String query = "INSERT INTO Delivery_Address(OrderIdNo,Name,MobileNo,DoorNo,Address,Location,District,State) VALUES (?,?,?,?,?,?,?,?)";
+		String query = "INSERT INTO delivery_address(order_id,name,mobile_no,door_no,address,location,district,state) VALUES (?,?,?,?,?,?,?,?)";
 		statement = connection.prepareStatement(query);
 		statement = connection.prepareStatement(query);
 

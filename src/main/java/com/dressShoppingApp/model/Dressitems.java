@@ -1,56 +1,56 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 public class Dressitems {
 
-	private String DressIdNo;
-	private String DressName;
-	private String BrandName;
-	private String Colour;
-	private String Price;
+	private String dressIdNo;
+	private String dressName;
+	private String brandName;
+	private String colour;
+	private String price;
 
 	public String getDressIdNo() {
-		return DressIdNo;
+		return dressIdNo;
 	}
 
 	public void setDressIdNo(String dressIdNo) {
-		this.DressIdNo = dressIdNo;
+		this.dressIdNo = dressIdNo;
 	}
 
 	public String getDressName() {
-		return DressName;
+		return dressName;
 	}
 
 	public void setDressName(String DressName) {
-		this.DressName = DressName;
+		this.dressName = DressName;
 	}
 
 	public String getBrandName() {
-		return BrandName;
+		return brandName;
 	}
 
 	public void setBrandName(String BrandName) {
-		this.BrandName = BrandName;
+		this.brandName = BrandName;
 	}
 
 	public String getColour() {
-		return Colour;
+		return colour;
 	}
 
 	public void setColour(String colour) {
-		this.Colour = colour;
+		this.colour = colour;
 	}
 
 	public String getPrice() {
-		return Price;
+		return price;
 	}
 
 	public void setPrice(String price) {
-		this.Price = price;
+		this.price = price;
 	}
 
 	public String toString() {
-		return " DressIdNo=" + DressIdNo + ",DressName=" + DressName + ", BrandName=" + BrandName + ", Colour=" + Colour
-				+ ", Price=" + Price + "";
+		return " dressIdNo=" + dressIdNo + ",dressName=" + dressName + ", brandName=" + brandName + ", colour=" + colour
+				+ ", price=" + price + "";
 	}
 
 }

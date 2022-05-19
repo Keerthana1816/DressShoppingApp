@@ -1,8 +1,8 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
-import com.dressShoppingApp.dao.OrderDAOImpl;
-import com.dressShoppingApp.dao.PaymentDAOImpl;
-import com.dressShoppingApp.model.PaymentTest;
+import com.dressshoppingapp.dao.OrderDAOImpl;
+import com.dressshoppingapp.dao.PaymentDAOImpl;
+import com.dressshoppingapp.model.PaymentTest;
 
 import java.util.Scanner;
 
@@ -17,6 +17,8 @@ public class PaymentTest {
 
 		System.out.println("Enter Order Id No:");
 		String OrderIdNo = sc.next();
+		System.out.println("Enter Name:");
+		String Name = sc.next();
 		System.out.println("Enter PaymentOption:");
 		String PaymentOption = sc.next();
 		System.out.println("Enter Price:");
@@ -29,6 +31,7 @@ public class PaymentTest {
 		Payment payment = new Payment();
 
 		payment.setOrderIdNo(OrderIdNo);
+		payment.setName(Name);
 		payment.setPaymentOption(PaymentOption);
 		payment.setPrice(Price);
 		payment.setDeliveryCharge(DeliveryCharge);

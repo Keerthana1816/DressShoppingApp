@@ -1,7 +1,7 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
-import com.dressShoppingApp.dao.DeliveryAddressDAOImpl;
-import com.dressShoppingApp.model.DeliveryAddressTest;
+import com.dressshoppingapp.dao.DeliveryAddressDAOImpl;
+import com.dressshoppingapp.model.DeliveryAddressTest;
 
 import java.util.Scanner;
 

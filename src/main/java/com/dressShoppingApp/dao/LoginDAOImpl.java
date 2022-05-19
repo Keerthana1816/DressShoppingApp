@@ -1,30 +1,29 @@
-package com.dressShoppingApp.dao;
+package com.dressshoppingapp.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.dressShoppingApp.model.Registration;
-import com.dressShoppingApp.validation.LoginValidator;
+import com.dressshoppingapp.validation.LoginValidator;
 
 public class LoginDAOImpl implements ILoginDAO {
 
-	public void loginValidator(String UserEmail, String password) throws Exception {
+	public void loginValidator(String email, String password) throws Exception {
 		Connection connection;
 		PreparedStatement statement;
 		ResultSet rs = null;
 		connection = ConnectionUtil.databaseConnection();
 
-		String query = "SELECT UserEmail,UserPassword FROM Dress_Shopping_App_User WHERE UserEmail=?";
+		String query = "SELECT email,password FROM dress_shopping_app_user WHERE email=?";
 		statement = connection.prepareStatement(query);
-		statement.setString(1, UserEmail);
+		statement.setString(1, email);
+		
 		rs = statement.executeQuery();
 		String Email = null;
 		String Password = null;
 		while (rs.next()) {
-			Email = rs.getString("UserEmail");
-			Password = rs.getString("UserPassword");
+			Email = rs.getString("email");
+			Password = rs.getString("password");
 		}
 		if (Email == null) {
 			System.out.println("Invalid UserEmail");

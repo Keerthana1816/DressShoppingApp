@@ -1,20 +1,19 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dressShoppingApp.dao.ConnectionUtil;
+import com.dressshoppingapp.dao.ConnectionUtil;
 
 public class ViewDressitems {
 	public static List<Dressitems> showAll() throws SQLException, ClassNotFoundException {
 		List<Dressitems> dress = new ArrayList<Dressitems>();
-		String sql = "select * from Dressitems";
+		String sql = "select * from dressitems";
 		Connection connection;
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
@@ -24,11 +23,11 @@ public class ViewDressitems {
 		ResultSet rs = statement.executeQuery(sql);
 
 		while (rs.next()) {
-			String DressIdNo = rs.getString("DressIdNo");
-			String DressName = rs.getString("DressName");
-			String BrandName = rs.getString("BrandName");
-			String Colour = rs.getString("Colour");
-			String Price = rs.getString("Price");
+			String DressIdNo = rs.getString("id");
+			String DressName = rs.getString("name");
+			String BrandName = rs.getString("brand");
+			String Colour = rs.getString("colour");
+			String Price = rs.getString("price");
 
 			// create object s
 			Dressitems d = new Dressitems();
@@ -48,18 +47,18 @@ public class ViewDressitems {
 		Connection connection;
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
-		String sql = "SELECT DressIdNo,DressName,BrandName,Colour,Price FROM Dressitems WHERE DressName=?";
+		String sql = "SELECT id,name,brand,colour,price FROM dressitems WHERE name=?";
 		statement = connection.prepareStatement(sql);
 		statement.setString(1, dressname);
 		// 3.execute query
 		ResultSet rs1 = statement.executeQuery();
 		// iterate rows
 		while (rs1.next()) {
-			String DressIdNo = rs1.getString("DressIdNo");
-			String DressName1 = rs1.getString("DressName");
-			String BrandName = rs1.getString("BrandName");
-			String Colour = rs1.getString("Colour");
-			String Price = rs1.getString("Price");
+			String DressIdNo = rs1.getString("id");
+			String DressName1 = rs1.getString("name");
+			String BrandName = rs1.getString("brand");
+			String Colour = rs1.getString("colour");
+			String Price = rs1.getString("price");
 
 			Dressitems d1 = new Dressitems();
 
@@ -79,18 +78,18 @@ public class ViewDressitems {
 		Connection connection;
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
-		String sql = "SELECT DressIdNo,DressName,BrandName,Colour,Price FROM Dressitems WHERE BrandName=?";
+		String sql = "SELECT id,name,brand,colour,price FROM dressitems WHERE brand=?";
 		statement = connection.prepareStatement(sql);
 		statement.setString(1, brandname);
 		// 3.execute query
 		ResultSet rs2 = statement.executeQuery();
 		// iterate rows
 		while (rs2.next()) {
-			String DressIdNo = rs2.getString("DressIdNo");
-			String DressName = rs2.getString("DressName");
-			String BrandName1 = rs2.getString("BrandName");
-			String Colour = rs2.getString("Colour");
-			String Price = rs2.getString("Price");
+			String DressIdNo = rs2.getString("id");
+			String DressName = rs2.getString("name");
+			String BrandName1 = rs2.getString("brand");
+			String Colour = rs2.getString("colour");
+			String Price = rs2.getString("price");
 
 			Dressitems d2 = new Dressitems();
 

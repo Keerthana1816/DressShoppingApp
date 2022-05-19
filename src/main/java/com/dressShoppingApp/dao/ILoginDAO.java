@@ -1,5 +1,5 @@
-package com.dressShoppingApp.dao;
+package com.dressshoppingapp.dao;
 
 public interface ILoginDAO {
-	public void loginValidator(String UserEmail, String password) throws Exception;
+	public void loginValidator(String email, String password) throws Exception;
 }

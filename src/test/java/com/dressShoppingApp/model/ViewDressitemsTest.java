@@ -1,9 +1,7 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.dressShoppingApp.model.Dressitems;
-import com.dressShoppingApp.model.ViewDressitems;
 import java.util.Scanner;
 
 public class ViewDressitemsTest {
@@ -25,24 +23,24 @@ public class ViewDressitemsTest {
 
 	public static void items() throws Exception {
 		System.out.println("Enter the DressName:");
-		String DressName = sc.next();
+		String dressName = sc.next();
 		List<Dressitems> dressname = new ArrayList<Dressitems>();
-		dressname = ViewDressitems.DressName(DressName);
+		dressname = ViewDressitems.DressName(dressName);
 		categories(dressname);
 
 	}
 
 	public static void items1() throws Exception {
 		System.out.println("Enter the BrandName:");
-		String BrandName = sc.next();
+		String brandName = sc.next();
 		List<Dressitems> brandname = new ArrayList<Dressitems>();
-		brandname = ViewDressitems.BrandName(BrandName);
+		brandname = ViewDressitems.BrandName(brandName);
 		categories1(brandname);
 
 	}
 
 	public static void show(List<Dressitems> dress) {
-		System.out.println("DressIdNo  DressName  BrandName  Colour  Price");
+		System.out.println("dressIdNo  dressName  brandName  colour  price");
 		for (Dressitems i : dress) {
 			System.out.println(i.getDressIdNo() + "\t\t" + i.getDressName() + "\t" + i.getBrandName() + "\t"
 					+ i.getColour() + "\t" + i.getPrice());

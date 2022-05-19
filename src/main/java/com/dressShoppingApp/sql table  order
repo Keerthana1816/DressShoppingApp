@@ -1,14 +1,12 @@
-DROP TABLE Dress_Shopping_App_Orders;
+DROP TABLE dress_shopping_app_orders;
 
-CREATE TABLE Dress_Shopping_App_Orders (
-DressIdNo INT PRIMARY KEY AUTO_INCREMENT,
-DressName VARCHAR ( 100 ) NOT NULL,
-BrandName VARCHAR ( 100 ) NOT NULL,
-Colour VARCHAR ( 100 ) NOT NULL,
-Size VARCHAR ( 100 ) NOT NULL,
-Price BIGINT ( 6 ) NOT NULL,
+CREATE TABLE dress_shopping_app_orders (
+order_id INT PRIMARY KEY AUTO_INCREMENT,
+id INT NOT NULL,
+size VARCHAR ( 100 ) NOT NULL,
+price BIGINT ( 6 ) NOT NULL,
 COUNT BIGINT ( 10 ) NOT NULL,
-TotalPrice BIGINT ( 10 ) NOT NULL
+total_price BIGINT ( 10 ) NOT NULL
 );
 
-SELECT * FROM Dress_Shopping_App_Orders;
+SELECT * FROM dress_shopping_app_orders;

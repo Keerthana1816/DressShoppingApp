@@ -1,28 +1,28 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 public class Login {
 
-	private String UserEmail;
-	private String UserPassword;
+	private String email;
+	private String password;
 
-	public String getUserEmail() {
-		return UserEmail;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUserEmail(String userEmail) {
-		this.UserEmail = userEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getUserPassword() {
-		return UserPassword;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setUserPassword(String userPassword) {
-		this.UserPassword = userPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String toString() {
-		return " UserEmail=" + UserEmail + ", UserPassword=" + UserPassword + "";
+		return " email=" + email + ", password=" + password + "";
 
 	}
 }

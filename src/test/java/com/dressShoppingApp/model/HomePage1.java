@@ -1,8 +1,8 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 import java.util.Scanner;
 
-import com.dressShoppingApp.validation.LoginValidator;
+import com.dressshoppingapp.validation.LoginValidator;
 
 public class HomePage1 {
 	public static void main(String[] args) throws Exception {
@@ -18,7 +18,7 @@ public class HomePage1 {
 		System.out.println("3.Exit");
 		int Press = sc.nextInt();
 		if (Press == 1) {
-			RegistrationTest.test();
+			UserTest.test();
 			home1();
 
 		}
@@ -31,7 +31,7 @@ public class HomePage1 {
 
 		else if (Press == 3) {
 
-			System.out.println("Thank you");
+			
 		} else if (Press != 1 || Press != 2 || Press != 3) {
 			System.out.println("Oops Something went worry...\nRefresh the page :(");
 		}

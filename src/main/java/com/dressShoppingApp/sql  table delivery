@@ -1,13 +1,13 @@
-CREATE TABLE Delivery_Address ( 
-Id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE delivery_address ( 
+order_Id INT NOT NULL,
 NAME VARCHAR ( 100 ) NOT NULL,
-MobileNo BIGINT ( 10 ) NOT NULL,
-DoorNo VARCHAR ( 100 ) NOT NULL,
-Address VARCHAR ( 100 ) NOT NULL,
-Location VARCHAR ( 100 ) NOT NULL,
-District VARCHAR ( 100 ) NOT NULL,
-State VARCHAR ( 100 ) NOT NULL
+mobile_no BIGINT ( 10 ) NOT NULL,
+door_no VARCHAR ( 100 ) NOT NULL,
+address VARCHAR ( 100 ) NOT NULL,
+location VARCHAR ( 100 ) NOT NULL,
+district VARCHAR ( 100 ) NOT NULL,
+state VARCHAR ( 100 ) NOT NULL
 );
 
-SELECT * FROM Delivery_Address;
-DROP TABLE Delivery_Address;
+SELECT * FROM delivery_address;
+DROP TABLE delivery_address;

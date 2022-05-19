@@ -1,10 +1,9 @@
-package com.dressShoppingApp.dao;
+package com.dressshoppingapp.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-import com.dressShoppingApp.model.Order;
+import com.dressshoppingapp.model.Order;
 
 public class OrderDAOImpl implements IOrderDAO {
 
@@ -13,14 +12,14 @@ public class OrderDAOImpl implements IOrderDAO {
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
 
-		String query = "INSERT INTO Dress_Shopping_App_Orders (DressIdNo,Size,Price,Quantity,TotalPrice) VALUES(?,?,?,?,?)";
+		String query = "INSERT INTO dress_shopping_app_orders (id,size,price,count,total_price) VALUES(?,?,?,?,?)";
 
 		statement = connection.prepareStatement(query);
 
 		statement.setString(1, Orders.getDressIdNo());
 		statement.setString(2, Orders.getSize());
 		statement.setString(3, Orders.getPrice());
-		statement.setString(4, Orders.getQuantity());
+		statement.setString(4, Orders.getCount());
 		statement.setString(5, Orders.getTotalPrice());
 
 		System.out.println();
@@ -36,7 +35,7 @@ public class OrderDAOImpl implements IOrderDAO {
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
 
-		String query = "UPDATE Dress_Shopping_App_Orders SET Size=? WHERE DressIdNo=?";
+		String query = "UPDATE dress_shopping_app_orders SET size=? WHERE id=?";
 
 		statement = connection.prepareStatement(query);
 

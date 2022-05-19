@@ -1,55 +1,55 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 public class Order {
 
-	private String DressIdNo;
-	private String Size;
-	private String Price;
-	private String Quantity;
-	private String TotalPrice;
+	private String id;
+	private String size;
+	private String price;
+	private String count;
+	private String totalPrice;
 
 	public String getDressIdNo() {
-		return DressIdNo;
+		return id;
 	}
 
 	public void setDressIdNo(String dressIdNo) {
-		this.DressIdNo = dressIdNo;
+		this.id = dressIdNo;
 	}
 
 	public String getSize() {
-		return Size;
+		return size;
 	}
 
 	public void setSize(String size) {
-		this.Size = size;
+		this.size = size;
 	}
 
 	public String getPrice() {
-		return Price;
+		return price;
 	}
 
 	public void setPrice(String price) {
-		this.Price = price;
+		this.price = price;
 	}
 
-	public String getQuantity() {
-		return Quantity;
+	public String getCount() {
+		return count;
 	}
 
 	public void setCount(String quantity) {
-		this.Quantity = quantity;
+		this.count = quantity;
 	}
 
 	public String getTotalPrice() {
-		return TotalPrice;
+		return totalPrice;
 	}
 
 	public void setTotalPrice(String totalPrice) {
-		this.TotalPrice = totalPrice;
+		this.totalPrice = totalPrice;
 	}
 
 	public String toString() {
-		return "  DressIdNo=" + DressIdNo + ", Size=" + Size + ", Price=" + Price + ",Quantity=" + Quantity
-				+ ",TotalPrice=" + TotalPrice + "";
+		return "  id=" + id + ", size=" + size + ", price=" + price + ",count=" + count + ",totalPrice=" + totalPrice
+				+ "";
 	}
 }

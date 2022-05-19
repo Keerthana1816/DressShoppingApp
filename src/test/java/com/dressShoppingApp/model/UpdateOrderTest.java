@@ -1,8 +1,8 @@
-package com.dressShoppingApp.model;
+package com.dressshoppingapp.model;
 
 import java.util.Scanner;
 
-import com.dressShoppingApp.dao.OrderDAOImpl;
+import com.dressshoppingapp.dao.OrderDAOImpl;
 
 
 public class UpdateOrderTest {

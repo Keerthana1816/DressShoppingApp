@@ -1,8 +1,8 @@
-package com.dressShoppingApp.validation;
+package com.dressshoppingapp.validation;
 
 import java.util.Scanner;
 
-import com.dressShoppingApp.dao.LoginDAOImpl;
+import com.dressshoppingapp.dao.LoginDAOImpl;
 
 public class LoginValidator {
 	public static void test() throws Exception {

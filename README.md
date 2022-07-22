@@ -29,7 +29,7 @@ Technologies used:
 
 Module 6: Delivery address
         *User can save the details for delivery.
-        
-    These are the modules present in my project.
    
  User can login the application and search for dresses with help of dress name and brand name. Then user can  buy the dresses.
+        
+    These are the modules present in my project.

@@ -3,6 +3,7 @@ Dress Shopping App-Core java
 It is an application which is useful for buying different kinds of Dresses.Based on differene Brands available with low cost.
 
 Technologies Used
+
 Java
 Maven
 MYSQL
